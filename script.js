@@ -1,3 +1,14 @@
+// ===== INTRO LOADER =====
+const loader = document.getElementById("introLoader");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    if (loader) {
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+    }
+  }, 2000); // 2 seconds cinematic delay
+});
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -188,4 +199,46 @@ document.addEventListener("DOMContentLoaded", () => {
   #music, #gift {
     padding: 30px 15px;
   }
+}
+/* ===== INTRO LOADER ===== */
+#introLoader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #2c003e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+.loaderContent {
+  text-align: center;
+  color: white;
+}
+
+.loaderContent h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.loaderContent p {
+  opacity: 0.8;
+}
+
+/* Spinner */
+.spinner {
+  margin: 20px auto;
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255,255,255,0.2);
+  border-top: 4px solid #ff4d6d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
