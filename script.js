@@ -1,14 +1,14 @@
-/* Button click surprise */
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("surpriseBtn");
 
-function showSurprise() {
-  alert("🎉 Surprise!! Happy Birthday 🎂💖 Hope you have an amazing day!");
+  btn.addEventListener("click", () => {
+    alert("🎉 Surprise Mumma!! Happy Birthday 💖");
 
-  // Extra fun effect: change background after click
-  document.body.style.background =
-    "linear-gradient(135deg, #a18cd1, #fbc2eb)";
+    document.body.style.background =
+      "linear-gradient(135deg, #ff9a9e, #fad0c4)";
 
-  // Change text after click
-  document.querySelector("h1").innerText = "🎉 Surprise Unlocked!";
-  document.querySelector("p").innerText =
-    "Wishing you endless happiness and joy 💖";
-}
+    document.querySelector("h1").innerText = "💖 Happy Birthday Mumma 💖";
+    document.querySelector("p").innerText =
+      "You are the best mom in the world 🌸 Love you forever ❤️";
+  });
+});
