@@ -1,3 +1,7 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("surpriseBtn");
   const music = document.getElementById("bgMusic");
@@ -108,3 +112,80 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+@media only screen and (max-width: 768px) {
+
+  /* General spacing fix */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HERO SECTION */
+  .hero-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .hero h3 {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  /* BUTTONS */
+  button, a {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  /* MEMORY GRID */
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* LETTER BOX */
+  .letter-box {
+    padding: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  /* CAKE */
+  .cake {
+    font-size: 3rem;
+  }
+
+  /* ENDING TEXT */
+  #ending h1 {
+    font-size: 1.6rem;
+  }
+
+  #ending h2 {
+    font-size: 1.2rem;
+  }
+
+  /* MUSIC + GIFT spacing */
+  #music, #gift {
+    padding: 30px 15px;
+  }
+}
